@@ -1,7 +1,7 @@
 CREATE DATABASE bizpulse_dwh;
 
--- Skema untuk menampung data mentah hasil extract dari MySQL
+-- Schema for staging tables (raw data from source systems)
 CREATE SCHEMA IF NOT EXISTS staging;
 
--- Skema untuk menampung Star Schema (Fact & Dimension) hasil transformasi
+-- Schema for analytics tables (Star Schema - Fact & Dimension) hasil transformasi
 CREATE SCHEMA IF NOT EXISTS analytics;
