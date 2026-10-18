@@ -1,0 +1,36 @@
+version: 2
+
+models:
+  - name: stg_daily_sales
+    description: "This model represents the daily sales data."
+    columns:
+      - name: sales_id
+        description: "Unique identifier for each sale."
+        data_tests:
+          - not_null
+          - unique
+      - name: transaction_date
+        description: "The date of the transaction."
+      - name: total_trx
+        description: "Total number of transactions for the day."
+      - name: total_revenue
+        description: "Total revenue generated from sales for the day."
+      - name: payment_method
+        description: "The method of payment used for the transactions, normalized to lowercase."
+        
+  - name: stg_top_products
+    description: "This model represents the top products sold."
+    columns:
+      - name: product_id
+        description: "Unique identifier for each product."
+        data_tests:
+          - not_null
+          - unique
+      - name: transaction_date
+        description: "The date of the transaction."
+      - name: product_name
+        description: "The name of the product."
+      - name: qty_sold
+        description: "The quantity of the product sold."
+      - name: subtotal
+        description: "The subtotal amount for the product sold."

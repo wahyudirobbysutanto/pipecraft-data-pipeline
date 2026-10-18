@@ -1,0 +1,13 @@
+version: 2
+
+seeds:
+  - name: payment_category_mapping
+    description: "Mapping of payment methods to their respective categories."
+    columns:
+      - name: payment_method
+        description: "The method of payment used for the transactions."
+        data_tests:
+          - not_null
+          - unique
+      - name: payment_category
+        description: "The category to which the payment method belongs."

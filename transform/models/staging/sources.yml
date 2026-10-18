@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: staging
+    database: bizpulse_dwh
+    schema: staging
+    tables:
+      - name: daily_sales
+      - name: top_products

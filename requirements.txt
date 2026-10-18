@@ -1,8 +1,8 @@
-pandas
-pymysql
-sqlalchemy
-psycopg2-binary
-python-dotenv
+pandas==2.2.3
+pymysql==1.1.1
+sqlalchemy==2.0.38
+psycopg2-binary==2.9.10
+python-dotenv==1.0.1
 
-dbt-core
-dbt-postgres
+dbt-core==1.12.6
+dbt-postgres==1.11.0

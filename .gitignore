@@ -17,3 +17,12 @@ __pycache__/
 # Database / Local Storage
 *.db
 *.sqlite3
+
+# dbt Artifacts & Logs
+transform/target/
+transform/dbt_packages/
+transform/logs/
+
+# OS Junk
+.DS_Store
+Thumbs.db

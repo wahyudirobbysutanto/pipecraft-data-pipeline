@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: fct_payment_summary
+    description: "This model summarizes the total revenue and total transactions grouped by payment method."
+    columns:
+      - name: payment_method
+        description: "The method of payment used for the transactions."
+        data_tests:
+          - not_null
+          - unique
+      - name: grand_total_revenue
+        description: "The total revenue generated from sales for each payment method."
+      - name: grand_total_transactions
+        description: "The total number of transactions for each payment method."
+  - name: fct_product_performance
+    description: "This model summarizes the total revenue generated and total units sold for each product."
+    columns:
+      - name: product_name
+        description: "The name of the product."
+        data_tests:
+          - not_null
+          - unique
+      - name: total_revenue_generated
+        description: "The total revenue generated from sales for each product."
+      - name: total_units_sold
+        description: "The total number of units sold for each product."
