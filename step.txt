@@ -13,3 +13,8 @@ dbt docs generate
 dbt docs serve
 
 dbt seed -> dipakai untuk insert dari seeds folder.
+
+git status
+git add .
+git commit -m "feat(dbt): add staging models, marts, seeds, and data tests"
+git push origin main
