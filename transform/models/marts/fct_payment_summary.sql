@@ -9,7 +9,9 @@ select
     a.payment_method,
     coalesce(b.payment_category, 'Uncategorized') as payment_category,
     sum(a.total_revenue) as grand_total_revenue,
-    sum(a.total_trx) as grand_total_transactions
+    sum(a.total_trx) as grand_total_transactions,
+    {{ safe_divide('sum(a.total_revenue)', 'sum(a.total_trx)') }} as avg_revenue_per_trx,
+    {{ classify_sales_tier('sum(a.total_revenue)') }} as revenue_tier
 from daily_sales a
 left join payment_category_mapping b 
     on a.payment_method = b.payment_method
