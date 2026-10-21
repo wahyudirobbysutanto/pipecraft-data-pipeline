@@ -8,7 +8,7 @@
 
 Below is the **Executive Sales Dashboard** built on Metabase, consuming directly from the dbt-modeled `analytics` schema in PostgreSQL (`bizpulse_dwh`).
 
-![Executive Sales Dashboard](Image/Dashboard.jpeg)
+![Executive Sales Dashboard](Image/Dashboard.jpg)
 
 ---
 

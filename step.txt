@@ -22,3 +22,14 @@ git push origin main
 -- DBT CODEGEN
 INSTALL PACKAGE : dbt deps
 example dbt-codegen : dbt run-operation generate_model_yaml --args "model_names: ['stg_daily_sales']"
+
+
+-- prefect
+
+prefect config set PREFECT_SERVER_ANALYTICS_ENABLED=false
+
+
+-- metabase
+winget install EclipseAdoptium.Temurin.21.JDK
+download metabase.jar
+java -jar metabase.jar

@@ -26,3 +26,7 @@ transform/logs/
 # OS Junk
 .DS_Store
 Thumbs.db
+
+# Metabase binary & local application database
+*.jar
+metabase.db*
