@@ -1,0 +1,29 @@
+# Python Virtual Environment
+venv/
+.venv/
+env/
+
+# Python Cache
+__pycache__/
+*.pyc
+
+# IDE Settings
+.vscode/
+.idea/
+
+# Database / Local Storage
+*.db
+*.sqlite3
+
+# dbt Artifacts & Logs
+transform/target/
+transform/dbt_packages/
+transform/logs/
+
+# OS Junk
+.DS_Store
+Thumbs.db
+
+# Metabase binary & local application database
+*.jar
+metabase.db*

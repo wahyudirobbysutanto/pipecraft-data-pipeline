@@ -1,0 +1,21 @@
+services:
+  data_pipeline:
+    build: .
+    container_name: pipecraft_pipeline
+    environment:
+      MYSQLDB_host: pipecraft_mysql
+      MYSQLDB_port: 3306
+      MYSQLDB_user: root
+      MYSQLDB_PASSWORD: ${MYSQLDB_PASSWORD}
+      MYSQLDB_DATABASE: bizpulse_db
+      POSTGRES_host: pipecraft_postgres
+      POSTGRES_port: 5432
+      POSTGRES_user: postgres
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DATABASE: bizpulse_dwh
+    networks:
+      - pipecraft_net
+
+networks:
+  pipecraft_net:
+    external: true

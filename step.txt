@@ -33,3 +33,15 @@ prefect config set PREFECT_SERVER_ANALYTICS_ENABLED=false
 winget install EclipseAdoptium.Temurin.21.JDK
 download metabase.jar
 java -jar metabase.jar
+
+
+-- docker
+docker compose up - d
+docker compose down -v
+docker ps
+
+docker network create pipecraft_net
+
+docker compose -f docker-compose.db.yml up -d
+
+docker compose -f docker-compose.app.yml up --build

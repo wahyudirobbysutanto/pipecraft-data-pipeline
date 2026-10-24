@@ -16,3 +16,64 @@
 2026-10-20 21:37:54,566 [INFO] Start process ingestion data from MySQL to PostgreSQL...
 2026-10-20 21:37:54,936 [ERROR] Error connecting to databases: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
 (Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-10-24 10:41:43,082 [INFO] Start process ingestion data from MySQL to PostgreSQL...
+2026-10-24 10:41:45,162 [INFO] Connection to MySQL and PostgreSQL established successfully.
+2026-10-24 10:41:45,214 [INFO] MySQL Tables detected: ['daily_sales', 'top_products']
+2026-10-24 10:41:45,234 [INFO] Columns in daily_sales: ['id', 'trx_date', 'total_trx', 'total_revenue', 'payment_method']
+2026-10-24 10:41:46,395 [INFO] Data from MySQL table 'daily_sales' (4 rows) copied to PostgreSQL staging.
+2026-10-24 10:41:46,399 [INFO] Columns in top_products: ['id', 'trx_date', 'product_name', 'qty_sold', 'subtotal']
+2026-10-24 10:41:46,443 [INFO] Data from MySQL table 'top_products' (3 rows) copied to PostgreSQL staging.
+2026-10-24 10:41:46,461 [INFO] Data ingestion process completed successfully.
+2026-10-24 11:50:11,976 [INFO] Start process ingestion data from MySQL to PostgreSQL...
+2026-10-24 11:50:12,229 [ERROR] Error connecting to databases: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-10-24 11:50:26,180 [INFO] Start process ingestion data from MySQL to PostgreSQL...
+2026-10-24 11:50:26,379 [ERROR] Error connecting to databases: (pymysql.err.OperationalError) (1045, "Access denied for user 'root'@'localhost' (using password: YES)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-10-24 11:59:08,505 [INFO] Start process ingestion data from MySQL to PostgreSQL...
+2026-10-24 11:59:08,933 [INFO] Connection to MySQL and PostgreSQL established successfully.
+2026-10-24 11:59:08,938 [INFO] MySQL Tables detected: ['daily_sales', 'top_products']
+2026-10-24 11:59:08,962 [INFO] Columns in daily_sales: ['id', 'trx_date', 'total_trx', 'total_revenue', 'payment_method']
+2026-10-24 11:59:08,988 [ERROR] Error processing table 'daily_sales': (psycopg2.errors.InvalidSchemaName) schema "staging" does not exist
+LINE 2: CREATE TABLE staging.daily_sales (
+                     ^
+
+[SQL: 
+CREATE TABLE staging.daily_sales (
+	id BIGINT, 
+	trx_date DATE, 
+	total_trx BIGINT, 
+	total_revenue FLOAT(53), 
+	payment_method TEXT
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-10-24 11:59:09,003 [INFO] Columns in top_products: ['id', 'trx_date', 'product_name', 'qty_sold', 'subtotal']
+2026-10-24 11:59:09,020 [ERROR] Error processing table 'top_products': (psycopg2.errors.InvalidSchemaName) schema "staging" does not exist
+LINE 2: CREATE TABLE staging.top_products (
+                     ^
+
+[SQL: 
+CREATE TABLE staging.top_products (
+	id BIGINT, 
+	trx_date DATE, 
+	product_name TEXT, 
+	qty_sold BIGINT, 
+	subtotal FLOAT(53)
+)
+
+]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2026-10-24 11:59:09,020 [INFO] Data ingestion process completed successfully.
+2026-10-24 12:01:27,736 [INFO] Start process ingestion data from MySQL to PostgreSQL...
+2026-10-24 12:01:28,033 [ERROR] Error connecting to databases: (pymysql.err.OperationalError) (2013, 'Lost connection to MySQL server during query')
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2026-10-24 12:01:38,903 [INFO] Start process ingestion data from MySQL to PostgreSQL...
+2026-10-24 12:01:39,221 [INFO] Connection to MySQL and PostgreSQL established successfully.
+2026-10-24 12:01:39,230 [INFO] MySQL Tables detected: ['daily_sales', 'top_products']
+2026-10-24 12:01:39,248 [INFO] Columns in daily_sales: ['id', 'trx_date', 'total_trx', 'total_revenue', 'payment_method']
+2026-10-24 12:01:39,288 [INFO] Data from MySQL table 'daily_sales' (4 rows) copied to PostgreSQL staging.
+2026-10-24 12:01:39,292 [INFO] Columns in top_products: ['id', 'trx_date', 'product_name', 'qty_sold', 'subtotal']
+2026-10-24 12:01:39,319 [INFO] Data from MySQL table 'top_products' (3 rows) copied to PostgreSQL staging.
+2026-10-24 12:01:39,319 [INFO] Data ingestion process completed successfully.
