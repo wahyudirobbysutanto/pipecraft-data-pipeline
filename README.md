@@ -92,8 +92,8 @@ docker compose -f docker-compose.app.yml up --build
 ```
 
 #### 5. Verify Database State with DBeaver / GUI Client
-* **MySQL Source:** Host `localhost`, Port `3307`, User `root`, Pass `abc123!@#`, DB `bizpulse_db`
-* **PostgreSQL DWH:** Host `localhost`, Port `5433`, User `postgres`, Pass `abc123!@#`, DB `bizpulse_dwh`
+* **MySQL Source:** Host `localhost`, Port `3307`, User `root`, Pass `<YOUR_PASSWORD>`, DB `bizpulse_db`
+* **PostgreSQL DWH:** Host `localhost`, Port `5433`, User `postgres`, Pass `<YOUR_PASSWORD>`, DB `bizpulse_dwh`
 
 ---
 
